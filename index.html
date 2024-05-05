@@ -71,7 +71,7 @@
 								</ul>
 							</li>
 							<li><a href="dark-contact.html">Contact</a></li>
-							<li><a class="btn-nav" href="dark-contact.html">Book consulation</a></li>
+							<li><a><button id="openBtn" class="btn-nav" >Book consulation</button></a></li>
 						</ul>
 						<a class='menu-trigger'>
 							<span>Menu</span>
@@ -83,6 +83,139 @@
 		</div>
 	</header>
 	<!-- ***** Header Area End ***** -->
+	<!-- ***** Contact Form Start ***** -->
+<div id="popupForm" class="form-popup">
+	<div class="col-lg-8 col-md-6 col-sm-12 form-container contact">
+	  <h2>Book Consultation</h2>
+	  <div class="row">
+		<div class="col-lg-6 col-md-12 col-sm-12 contact-item start">
+		  <input type="text" placeholder="First Name" class="contact-input">
+		</div>
+		<div class="col-lg-6 col-md-12 col-sm-12 contact-item">
+		  <input type="text" placeholder="Last Name" class="contact-input">
+		</div>
+		<div class="col-lg-6 col-md-12 col-sm-12 contact-item">
+		  <input type="email" placeholder="Email Address" class="contact-input">
+		</div>
+		<div class="col-lg-6 col-md-12 col-sm-12 contact-item">
+		  <input type="tel" placeholder="Phone Number" class="contact-input">
+		</div>
+		<div class="col-lg-6 col-md-12 col-sm-12 contact-item">
+		  <div class="text-area-container">
+			<p>Preferred finish date:</p>
+			<textarea placeholder="Select preferred date" class="contact-textarea"></textarea>
+		  </div>
+		</div>
+		<div class="col-lg-6 col-md-12 col-sm-12 contact-item">
+		  <input type="date" placeholder="Date of Launch" class="contact-input">
+		</div>
+		<div class="col-lg-12 contact-item">
+		  <input type="file" id="image" name="image" accept="image/*" class="contact-input">
+		  <label for="image">Upload Image</label>
+		</div>
+		<div class="col-lg-12 contact-item">
+		  <button class="btn contact-btn">SEND</button>
+		  <button type="button" class="btn cancel contact-btn" id="closeBtn">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- ***** Contact Form End ***** -->
+  
+  
+<style>
+
+	.text-area-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-area-container p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.btn{
+background-color: #120C2D;
+color: #fff;
+}
+
+   
+/* 
+---------------------------------------------
+contact
+--------------------------------------------- 
+*/
+
+#popupForm {
+display: none;
+position: absolute;
+
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  
+}
+
+.form-container {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 25px;
+}
+
+.contact-item {
+	margin-bottom: 0px;
+
+}
+#openBtn {
+	border: 1px solid #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #120C2D;
+
+}
+.contact-input,
+.contact-textarea {
+	width: 100%;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #120C2D;
+  background-color: #fff;
+
+}
+
+.contact-btn li a button{
+  background-color: #120C2D;
+
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #120C2D;
+}
+
+
+</style>
+	<!-- ***** Contact Form End ***** -->
 
 
 	<!-- ***** Welcome Area Start ***** -->
@@ -174,7 +307,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-					<img src="IMG_7582-1.jpeg" class="rounded img-fluid d-block mx-auto" alt="App">
+					<img src="IMG_7582.jpeg" class="rounded img-fluid d-block mx-auto" alt="App">
 				</div>
 				<div class="col-lg-1"></div>
 				<div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
@@ -577,7 +710,17 @@
 
 
 
-		
+	<script>
+		document.getElementById('openBtn').addEventListener('click', function() {
+			document.getElementById('popupForm').style.display = 'block';
+		});
+	  
+		document.getElementById('closeBtn').addEventListener('click', function() {
+			document.getElementById('popupForm').style.display = 'none';
+		});
+	  </script>
+	  
+	  
 	
 </body>
 </html>
