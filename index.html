@@ -21,6 +21,8 @@
 	<!-- Custom CSS -->
 	<link href="assets/css/violet.css" rel="stylesheet" type="text/css">
 
+
+
 	<link rel="stylesheet" href="">
 	
 
@@ -332,6 +334,8 @@
 	 </section>
 	 
 <style>
+	/* CSS for regular styling */
+
 	.bg-section {
     background-image: url('../html/flyer background.png');
 	background-size: cover;
@@ -340,68 +344,44 @@
     background-position: center; /* Optional: Adjusts the position of the background image */
 	height: 700px; /* Adjust the height of the section as needed */
 	position: relative;
-}
+	}
 .image-container {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.image-container a {
-   margin: 10px; /* Adjust spacing between images */
-   transition: transform 0.3s ease;
-   display: block;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .image-item {
+    flex: 0 0 25%; /* Each item takes up 25% of the container width */
+    max-width: 25%; /* Ensure items do not exceed 25% width */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .image-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .image-description {
+    text-align: center;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .image-item {
+      flex: 0 0 50%; /* Two items per row */
+      max-width: 50%;
+    }
+  }
 
-.image-container a:hover {
-   transform: scale(1.1); /* Increase size on hover */
-}
 
-.image-container img {
-   width: 300px; /* Adjust image size as needed */
-   height: auto;
-   border-radius: 5px; /* Optional: Adds rounded corners */
-}
 
-.image-item {
-   width: 300px; /* Adjust item width as needed */
-   text-align: center;
-}
 
-.image-item a {
-   display: block;
-}
 
-.image-item img {
-   width: 100%; /* Make image responsive within its container */
-   height: auto;
-   border-radius: 5px; /* Optional: Adds rounded corners */
-   transition: transform 0.3s ease; /* Smooth hover effect */
-}
-.image-description {
-   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-   padding: 10px;
-   border-radius: 5px;
-   margin-top: 10px;
-   text-align: center;
-}
 
-.image-description p {
-   margin: 0;
-   font-size: 14px;
-   color: #333;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-   .image-item {
-       width: 100%; /* Full width for smaller screens */
-   }
-}
-</style>	
+</style>
 	<!-- ***** here were testimonials ***** -->
 
 	<!-- ***** Pricing Plans Start ***** -->
