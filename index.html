@@ -177,77 +177,97 @@
 			</div>
 		</div>
 		<!-- ***** Header Text End ***** -->
-	</div>
-	<!-- ***** Welcome Area End ***** -->
 
-<style>
-	section {
-    padding-bottom: 100px;
-}
 
-.home-feature {
-    /* Additional styles if needed */
-}
 
+
+
+		<style>
+			/* Styling for glass effect */
 .features-small-item {
-    text-decoration: none;
-    color: inherit;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 0; /* Remove padding to ensure consistent size */
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  background-size: cover; /* Ensures the background image covers the entire element */
+  background-position: center; /* Centers the background image */
+  height: 300px; /* Set a fixed height to ensure all cards are the same size */
 }
-</style>
-<!-- ***** Features Small Start ***** -->
-<section class="section home-feature"  id="features">
-	<div class="container">
-	<div class="row">
-	<div class="col-lg-12">
-	<div class="row">
-	<!-- ***** Features Small Item Start ***** -->
-	<div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
-	<a href="dark-features-single.html" class="features-small-item start">
 
-	<div class="icon">
-	<i class="fa fa-comments-o"></i>
+.features-small-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.features-small-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.features-small-item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure icon is centered vertically */
+}
+
+.features-small-item .icon i {
+  font-size: 36px;
+  color: #fff;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .col-lg-4 {
+    margin-bottom: 30px; /* Adjust spacing between cards on smaller screens */
+  }
+}
+
+		</style>
 	</div>
-	<h5 class="features-title"> View our Webdesign Bookings</h5>
-	<p>View our Recent projects and Deals. Premade Templates are </p>
-
-	</a>
-	</div>
-	<!-- ***** Features Small Item End ***** -->
-	
-						<!-- ***** Features Small Item Start ***** -->
-						<div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
-							<a href="dark-features-single.html" class="features-small-item">
-								<div class="icon">
-									<i class="fa fa-thumbs-o-up"></i>
-								</div>
-								<h5 class="features-title">Social Media</h5>
-								<p>Unlock the Power of Connection: Social Media Strategies to Amplify Your Webbing Business. 
-									Let's Stitch Together a Vibrant Online Community</p>
-							</a>
-						</div>
-						<!-- ***** Features Small Item End ***** -->
-
-						<!-- ***** Features Small Item Start ***** -->
-						<div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
-							<a href="dark-features-single.html" class="features-small-item end">
-								<div class="icon">
-									<i class="fa fa-laptop"></i>
-								</div>
-								<h5 class="features-title">Experience Design</h5>
-								<p> Elevate Your Webbing Business with Thoughtful Experience Design. 
-									Let's Create Memorable Journeys for Your Customers, Weaving Together Beauty, Functionality, and Delight</p>
-							</a>
-						</div>
-						<!-- ***** Features Small Item End ***** -->
-
-					</div>
+	<section class="section home-feature" id="features">
+		<div class="container">
+		  <div class="row">
+		  
+			<!-- Card 1 -->
+			<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+			  <a href="dark-features-single.html" class="features-small-item glass-effect" style="background-image: url('card1.png')">
+				<div class="icon">
 				</div>
+			  </a>
 			</div>
+			
+			<!-- Card 2 -->
+			<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+			  <a href="dark-features-single.html" class="features-small-item glass-effect" style="background-image: url('card2.png')">
+				<div class="icon">
+				</div>
+			  </a>
+			</div>
+			
+			<!-- Card 3 -->
+			<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+			  <a href="dark-features-single.html" class="features-small-item glass-effect" style="background-image: url('card3.png')">
+				<div class="icon">
+				</div>
+			  </a>
+			</div>
+			
+		  </div>
 		</div>
-
-	</section>
-	<!-- ***** Features Small End ***** -->
-
+	  </section>
+	  
+	  
 
 
 
