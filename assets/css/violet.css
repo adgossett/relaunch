@@ -25,11 +25,25 @@ Table of contents
 -------------my custom font-------------------------------- */
 
 @font-face {
-    font-family: 'MyCustomFont';    
-    src: url('../fonts/Mangkinoy-Jpa5K.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'CustomFont';    
+    src: url('../fonts/elagernitalic-lgmxw.ttf') format('truetype');
+   
+
+    font-weight: normal;    src: url('../fonts/Mangkinoy-Jpa5K.otf') format('truetype');
+    font-weight: normal;    src: url('../fonts/elagern-nrpoo.ttf') format('truetype');
+    font-weight: normal;    src: url('../fonts/elagernitalic-lgmxw.ttf') format('truetype');
+
+
 }
+h2,h1{
+  font-family: 'CustomFont', sans-serif; /* Use your custom font as primary, fallback to sans-serif */
+  font-size: 28px; /* Adjust the font size as needed */
+  color: #333; /* Set the text color */
+  /* Add more styles as needed */
+}
+
+
+
 
 
 
@@ -1125,95 +1139,23 @@ welcome
 features
 --------------------------------------------- 
 */
+
+
+
+
 .features-small-item {
-  display: block;
-  background: #FFFFFF;
-  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  padding: 30px;
-  text-align: center;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   position: relative;
-  margin-bottom: 30px;
-  height: 350px;
-  width: 300px;
+  display: block;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+
 }
-
-.features-small-item.start {
-  border-radius: 3px;
-  border-top-left-radius: 100px;
-}
-
-.features-small-item.start:before {
-  border-radius: 3px;
-  border-top-left-radius: 100px;
-}
-
-.features-small-item.end {
-  border-radius: 3px;
-  border-top-right-radius: 100px;
-}
-
-.features-small-item.end:before {
-  border-radius: 3px;
-  border-top-right-radius: 100px;
-}
-
-.features-small-item:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    background-image: linear-gradient(135deg, #8F00FF 0%, #8F00FF 100%);
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    opacity: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-  }
-  
-.features-small-item:hover:before {
-  opacity: 1;
-  background-color:transparent;
-}
-
-.features-small-item:hover .features-title {
-  color: #8F00FF;
-}
-
-.features-small-item:hover p {
-  color: #8F00FF;
-}
-
-.features-small-item:hover a span, .features-small-item:hover a i {
-  color: #fff;
-}
-.features-small-item {
-    position: relative;
-    display: block;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Light background with transparency */
-    border-radius: 15px;
-    backdrop-filter: blur(10px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-
-
-
 
 
 .section {
@@ -1241,6 +1183,11 @@ features
   transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
   overflow: hidden;
   text-align: center;
+
+
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px; /* Adds space between cards */
 }
 
 .glass-image {
@@ -1248,6 +1195,8 @@ features
   height: auto;
   margin-top: 20px;
   border-radius: 15px;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+
   transition: transform 0.3s ease-in-out;
 }
 
@@ -1264,35 +1213,149 @@ features
 .features-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #8F00FF;
 }
 
 .features-small-item p {
   margin-bottom: 0;
 }
 
+
+
+
+
+
+
+/* Base styles for glass container */
+.glass-container {
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px; /* Adds space between cards */
+}
+
+/* Hover effect for glass container */
+.glass-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjusted shadow on hover */
+}
+
+/* Image inside glass container */
+.glass-image {
+  width: 100%; /* Ensures image fills container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 15px; /* Rounded corners */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect on hover */
+}
+
+
+
+
+
+
+
+
+/* Responsive adjustments */
 @media (max-width: 1200px) {
   .glass-container {
-      padding: 18px; /* Slightly reduced padding */
-      border-radius: 13px; /* Adjusted border radius */
-      box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
+    padding: 18px; /* Slightly reduced padding */
+    border-radius: 13px; /* Adjusted border radius */
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
   }
 }
 
 @media (max-width: 992px) {
   .glass-container {
-      padding: 16px; /* Further reduced padding */
-      border-radius: 12px; /* Further adjusted border radius */
-      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
+    padding: 16px; /* Further reduced padding */
+    border-radius: 12px; /* Further adjusted border radius */
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
   }
 }
 
 @media (max-width: 600px) {
   .glass-container {
-      padding: 15px; /* Further reduced padding */
-      border-radius: 10px; /* Further adjusted border radius */
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Further reduced shadow */
+    padding: 15px; /* Further reduced padding */
+    border-radius: 10px; /* Further adjusted border radius */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Further reduced shadow */
   }
 }
+
+@media (max-width: 334px) {
+  .glass-container {
+    padding: 15px; /* Further reduced padding */
+    border-radius: 10px; /* Further adjusted border radius */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Further reduced shadow */
+  }
+}
+
+/* Ensure image maintains aspect ratio */
+.glass-image {
+  max-width: 344px; /* Set max width for images */
+  height: 882px; /* Set fixed height for images */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .features-small-item:hover {
@@ -2389,8 +2452,7 @@ footer  background-image: linear-gradient(127deg, #8F00FF 0%, #8F00FF 91%);
 --------------------------------------------- 
 */
 footer {
-  background-image:url(/header2.png);
-
+  background: linear-gradient(to right, #8F00FF, #4A00E0);
   padding-top: 70px;
 }
 
@@ -3595,3 +3657,16 @@ preloader
     opacity: 0;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
