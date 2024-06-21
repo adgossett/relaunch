@@ -180,60 +180,59 @@
 
 
 
+<style>
+		/* Base styles */
+		.features-small-item {
+		  display: block;
+		  position: relative;
+		  overflow: hidden;
+		  border-radius: 10px;
+		  text-decoration: none;
+		  transition: transform 0.3s ease;
+		  background-size: cover;
+		  background-position: center;
+		  height: 300px; /* Set a fixed height for desktop screens */
+		  padding: 20px; /* Add padding for spacing */
+		  color: #fff; /* Text color */
+		}
+		
+		.features-small-item::before {
+		  content: '';
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  z-index: -1; /* Ensure it's behind the content */
+		  border-radius: inherit;
+		  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+		  background-color: rgba(255, 255, 255, 0.1); /* Background color with opacity */
+		  opacity: 0; /* Initially invisible */
+		  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+		}
+		
+		.features-small-item:hover::before {
+		  opacity: 1; /* Show the glass morphism effect on hover */
+		}
+		
+		.features-small-item .icon {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: 100%;
+		}
+		
+		.features-small-item .icon i {
+		  font-size: 36px;
+		  color: #fff;
+		}
+
+		
+		
+				</style>
 
 
-		<style>
-			/* Styling for glass effect */
-.features-small-item {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  padding: 0; /* Remove padding to ensure consistent size */
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  background-size: cover; /* Ensures the background image covers the entire element */
-  background-position: center; /* Centers the background image */
-  height: 300px; /* Set a fixed height to ensure all cards are the same size */
-}
 
-.features-small-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.features-small-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  z-index: 1;
-}
-
-.features-small-item .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Ensure icon is centered vertically */
-}
-
-.features-small-item .icon i {
-  font-size: 36px;
-  color: #fff;
-}
-
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  .col-lg-4 {
-    margin-bottom: 30px; /* Adjust spacing between cards on smaller screens */
-  }
-}
-
-		</style>
 	</div>
 	<section class="section home-feature" id="features">
 		<div class="container">
