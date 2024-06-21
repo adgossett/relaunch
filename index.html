@@ -178,58 +178,86 @@
 		</div>
 		<!-- ***** Header Text End ***** -->
 
-
-
 <style>
-		/* Base styles */
-		.features-small-item {
-		  display: block;
-		  position: relative;
-		  overflow: hidden;
-		  border-radius: 10px;
-		  text-decoration: none;
-		  transition: transform 0.3s ease;
-		  background-size: cover;
-		  background-position: center;
-		  height: 300px; /* Set a fixed height for desktop screens */
-		  padding: 20px; /* Add padding for spacing */
-		  color: #fff; /* Text color */
-		}
-		
-		.features-small-item::before {
-		  content: '';
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  height: 100%;
-		  z-index: -1; /* Ensure it's behind the content */
-		  border-radius: inherit;
-		  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
-		  background-color: rgba(255, 255, 255, 0.1); /* Background color with opacity */
-		  opacity: 0; /* Initially invisible */
-		  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-		}
-		
-		.features-small-item:hover::before {
-		  opacity: 1; /* Show the glass morphism effect on hover */
-		}
-		
-		.features-small-item .icon {
-		  display: flex;
-		  justify-content: center;
-		  align-items: center;
-		  height: 100%;
-		}
-		
-		.features-small-item .icon i {
-		  font-size: 36px;
-		  color: #fff;
-		}
+	/* Base styles */
+/* Base styles */
+.features-small-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Set a fixed height for desktop screens */
+    padding: 20px; /* Add padding for spacing */
+    color: #fff; /* Text color */
+  }
+  
+  .features-small-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind the content */
+    border-radius: inherit;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Background color with opacity */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  }
+  
+  .features-small-item:hover::before {
+    opacity: 1; /* Show the glass morphism effect on hover */
+  }
+  
+  .features-small-item .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .features-small-item .icon i {
+    font-size: 36px;
+    color: #fff;
+  }
+/* Media queries */
 
-		
-		
-				</style>
+
+/* Media queries for different images on smaller screens */
+@media (max-width: 991px) {
+  .features-small-item {
+    padding: 15px; /* Adjust padding for smaller screens */
+    min-height: 300px; /* Ensure minimum height to prevent content overlap */
+
+  }
+
+  .features-small-item .icon i {
+    font-size: 24px; /* Decrease icon size on smaller screens */
+  }
+
+  /* Use different background images for each card on smaller screens */
+  .col-lg-4:nth-child(1) .features-small-item {
+    background-image: url('cardone.png'); /* Replace with your mobile version of card1 */
+  }
+
+  .col-lg-4:nth-child(2) .features-small-item {
+    background-image: url('secondcard.png'); /* Replace with your mobile version of card2 */
+  }
+
+  .col-lg-4:nth-child(3) .features-small-item {
+    background-image: url('third card.png'); /* Replace with your mobile version of card3 */
+  }
+}
+
+
+
+</style>
+
 
 
 
