@@ -23,23 +23,25 @@ Table of contents
 15. preloader
 
 -------------my custom font-------------------------------- */
-
+/* Font-face declaration */
 @font-face {
-    font-family: 'CustomFont';    
-    src: url('../fonts/elagernitalic-lgmxw.ttf') format('truetype');
-   
-
-    font-weight: normal;    src: url('../fonts/Mangkinoy-Jpa5K.otf') format('truetype');
-    font-weight: normal;    src: url('../fonts/elagern-nrpoo.ttf') format('truetype');
-    font-weight: normal;    src: url('../fonts/elagernitalic-lgmxw.ttf') format('truetype');
-
-
+  font-family: 'CustomFont';
+  src: url('../fonts/elagernitalic-lgmxw.ttf') format('truetype');
+  font-weight: normal;
 }
-h2,h1{
-  font-family: 'CustomFont', sans-serif; /* Use your custom font as primary, fallback to sans-serif */
-  font-size: 28px; /* Adjust the font size as needed */
-  color: #333; /* Set the text color */
-  /* Add more styles as needed */
+
+/* Global styles */
+html, body {
+  font-family: "Nunito", sans-serif;
+  /* Other global styles */
+}
+
+/* Example usage */
+h1, h2 {
+  font-family: 'CustomFont', sans-serif;
+  font-size: 28px;
+  color: #333;
+  /* Additional styles */
 }
 
 
@@ -1265,6 +1267,7 @@ features
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Further reduced shadow */
   }
 }
+
 
 
 
@@ -2794,7 +2797,46 @@ pages
     position: relative;
   }
 }
+/* 
+---------------------------------------------
+new section here
+--------------------------------------------- */
 
+.page-bottom .browser-preview {
+    position: relative;
+    border: 1px solid #ccc; /* Adjust border color */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    background: #fff;
+}
+
+.page-bottom .browser-header {
+    height: 40px; /* Browser header height */
+    background: #f0f0f0; /* Header background color */
+    border-bottom: 1px solid #ccc; /* Header border color */
+}
+
+.page-bottom .address-bar {
+    height: 8px; /* Address bar height */
+    background: #ddd; /* Address bar color */
+    border-bottom: 1px solid #ccc; /* Address bar border color */
+}
+
+.page-bottom .browser-body {
+    padding: 10px; /* Adjust padding inside the browser frame */
+}
+
+.page-bottom .browser-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Additional styles for other elements can remain unchanged */
+
+
+*/
 /* 
 ---------------------------------------------
 faq
@@ -3557,7 +3599,10 @@ preloader
 
 
 
-
-
+/* 
+---------------------------------------------
+portfiolo
+--------------------------------------------- 
+*/
 
 
